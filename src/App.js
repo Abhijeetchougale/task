@@ -9,21 +9,23 @@ import TicketList from './Component/TicketList';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+
   return (
     <div className="App">
       <ToastContainer
         theme='colored'
-        position="top-center" 
-        autoClose={1000} 
-        closeButton={false} 
+        position="top-center"
+        autoClose={1000}
+        closeButton={false}
       />
       <BrowserRouter>
-      <Navbar/>
-      <Routes>      
-        <Route path="/login" element={<Login/>}></Route>
-        <Route path="/register" element={<Registration/>}></Route>
-        <Route path="/ticket" element={<TicketList/>}></Route>
-      </Routes>
+        <Navbar />
+        <Routes>
+        <Route path="/" element={<Login />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Registration />}></Route>
+          <Route path="/ticket" element={<TicketList />}></Route>
+        </Routes>
       </BrowserRouter>
     </div>
   );
